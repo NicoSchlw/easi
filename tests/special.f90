@@ -47,13 +47,6 @@ contains
       R3= transpose(reshape((/ c, -s, 0d0, s, c, 0d0, 0d0, 0d0, 1d0 /), shape(R3)))
 
       Stress = transpose(reshape((/ sii(2), 0d0, 0d0, 0d0, sii(1), 0d0, 0d0, 0d0, sii(3) /), shape(Stress)))
-<<<<<<< HEAD
-      Stress_cartesian_norm = MATMUL(R3,MATMUL(R2,MATMUL(R1,MATMUL(Stress,&
-        MATMUL(TRANSPOSE(R1),MATMUL(TRANSPOSE(R2),TRANSPOSE(R3)))))))/sigmazz
-=======
-      Stress_cartesian_norm = &
-        MATMUL(R3,MATMUL(R2,MATMUL(R1,MATMUL(Stress,MATMUL(TRANSPOSE(R1),MATMUL(TRANSPOSE(R2),TRANSPOSE(R3)))))))/sigmazz
->>>>>>> master
 
     ELSE
       c2bis = c2 - cos(2d0*(Phi-dip_rad))
